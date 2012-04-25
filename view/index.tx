@@ -1,0 +1,16 @@
+: include 'header.inc'
+
+<div class="span9">
+  <div class="well">
+    <ul class="nav nav-list">
+      <li class="nav-header"><p>List</p></li>
+      : for $items -> $item {
+          <li>
+            <p><img src="<: $item["media:thumbnail"]["url"] :>" /><a href="<: $item.link :>"><: $item.title :></a></p>
+          </li>
+      : }
+    </ul>
+  </div>
+</div>
+
+: include 'footer.inc'
